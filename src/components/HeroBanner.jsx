@@ -8,21 +8,9 @@ export default function HeroBanner() {
   return (
     <section
       id="home"
-      className="relative mx-auto max-w-design px-5 sm:px-8 lg:min-h-[760px] lg:px-10"
+      className="mx-auto max-w-design px-5 sm:px-8 lg:px-10"
     >
-      {/* Background plant image — contained to the hero so it can't bleed
-          into the sections below, and fading to solid forest at the bottom. */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[520px] overflow-hidden sm:h-[640px] lg:h-[760px]">
-        <img
-          src="/assets/hero-bg.jpg"
-          alt=""
-          aria-hidden="true"
-          className="mx-auto h-full w-full max-w-design object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/40 to-forest" />
-      </div>
-
-      <div className="relative z-10 grid items-start gap-10 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16">
+      <div className="grid items-start gap-10 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16">
         {/* ---- Left column ---- */}
         <div className="animate-fade-up">
           <h1 className="text-6xl font-semibold leading-none tracking-tight sm:text-7xl lg:text-8xl xl:text-[7rem]">
