@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-forest font-sans text-white antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Visible keyboard focus for accessibility */
+  :focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Frosted translucent panel used across cards / sections */
+  .glass {
+    @apply border border-white/10 bg-white/[0.05] backdrop-blur-sm;
+  }
+
+  /* Outlined pill button matching the Figma "Buy Now / Explore" style */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-3 rounded-xl border-2
+      border-white/90 text-white transition-all duration-300
+      hover:bg-white hover:text-forest focus-visible:bg-white focus-visible:text-forest;
+  }
+}
+
+/* Decorative gradient swash used beside section titles */
+.title-swash {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
