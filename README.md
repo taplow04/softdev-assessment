@@ -8,8 +8,10 @@ Every section, image, color, font and piece of copy was extracted directly from
 the Figma source file (`Front-end test.fig`), so the result matches the design as
 closely as possible across desktop, tablet and mobile.
 
-> **Live demo:** _add your Vercel URL here after deploying_
-> **Repository:** https://github.com/taplow04/softdev-assessment
+**▶️ View it live: [softdev-assessment.vercel.app](https://softdev-assessment.vercel.app/)**
+
+> **🔗 Live demo:** https://softdev-assessment.vercel.app/
+> **📦 Repository:** https://github.com/taplow04/softdev-assessment
 
 ---
 
@@ -220,6 +222,7 @@ Designed mobile-first and validated from **320px up to 1440px+**:
 ## 🌐 Deployment
 
 The app is a static Vite build and deploys with zero configuration.
+It is deployed live on Vercel at **https://softdev-assessment.vercel.app/**.
 
 **Vercel**
 
