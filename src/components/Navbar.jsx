@@ -102,8 +102,10 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-0 z-40 bg-forest/95 backdrop-blur-md transition-opacity duration-300 lg:hidden ${
-          open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+        className={`fixed inset-0 z-40 bg-forest/95 transition-opacity duration-300 lg:hidden ${
+          open
+            ? 'pointer-events-auto opacity-100 backdrop-blur-md'
+            : 'pointer-events-none invisible opacity-0'
         }`}
       >
         <ul className="flex h-full flex-col items-center justify-center gap-8 font-script text-3xl">

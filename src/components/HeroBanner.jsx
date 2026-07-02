@@ -10,15 +10,16 @@ export default function HeroBanner() {
       id="home"
       className="relative mx-auto max-w-design px-5 sm:px-8 lg:px-10"
     >
-      {/* Background plant image, fades into the page */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 flex justify-center">
+      {/* Background plant image — contained to the hero so it can't bleed
+          into the sections below, and fading to solid forest at the bottom. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[560px] overflow-hidden sm:h-[680px] lg:h-[820px]">
         <img
           src="/assets/hero-bg.jpg"
           alt=""
           aria-hidden="true"
-          className="h-[520px] w-full max-w-design object-cover object-top opacity-90 sm:h-[720px] lg:h-[900px]"
+          className="mx-auto h-full w-full max-w-design object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/60 to-forest" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/40 to-forest" />
       </div>
 
       <div className="relative z-10 grid items-start gap-10 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:pt-16">
@@ -48,7 +49,7 @@ export default function HeroBanner() {
           </div>
 
           {/* Floating testimonial card */}
-          <figure className="mt-14 max-w-md rounded-[2.5rem] glass p-6 shadow-soft sm:mt-20">
+          <figure className="mt-14 max-w-md rounded-[2.5rem] glass-strong p-6 shadow-soft sm:mt-20">
             <div className="flex items-center gap-4">
               <img
                 src={heroReview.avatar}
@@ -68,24 +69,25 @@ export default function HeroBanner() {
 
         {/* ---- Right column: featured plant card ---- */}
         <div className="relative flex justify-center lg:justify-end">
-          <article className="relative w-full max-w-[420px] rounded-[3.5rem] glass px-8 pb-10 pt-40 shadow-card">
-            {/* Plant image floating above the card */}
-            <img
-              src="/assets/aglaonema.png"
-              alt="Aglaonema plant"
-              className="absolute -top-16 left-1/2 w-[320px] -translate-x-1/2 drop-shadow-2xl sm:w-[360px]"
-            />
-            <p className="text-lg text-white/75">Indoor Plant</p>
-            <h3 className="mt-2 text-3xl font-normal text-white/90 sm:text-4xl">
+          <article className="relative w-full max-w-[380px] rounded-[3rem] glass-strong px-8 pb-8 pt-8 shadow-card">
+            {/* Plant image sits above the card, kept in flow so the copy
+                below stays aligned with it. */}
+            <div className="-mt-28 mb-4 flex justify-center sm:-mt-32">
+              <img
+                src="/assets/aglaonema.png"
+                alt="Aglaonema plant"
+                className="w-[240px] drop-shadow-2xl sm:w-[280px]"
+              />
+            </div>
+            <p className="text-base text-white/70">Indoor Plant</p>
+            <h3 className="mt-1 text-3xl font-normal text-white/90">
               Aglaonema plant
             </h3>
 
-            <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center gap-2" aria-hidden="true">
-                <span className="h-1.5 w-6 rounded-full bg-white" />
-                <span className="h-1.5 w-1.5 rounded-full bg-white" />
-                <span className="h-1.5 w-1.5 rounded-full bg-white" />
-              </div>
+            <div className="mt-5 flex items-center gap-2" aria-hidden="true">
+              <span className="h-1.5 w-6 rounded-full bg-white" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
             </div>
 
             <Button
