@@ -2,13 +2,16 @@
 // description, and a price + add-to-cart footer. Configurable via `plant` prop.
 export default function PlantCard({ plant }) {
   return (
-    <article className="group relative mt-24 flex flex-col rounded-[3.5rem] glass px-8 pb-8 pt-32 text-white/80 shadow-card transition-transform duration-300 hover:-translate-y-2">
-      {/* Floating plant image */}
-      <img
-        src={plant.image}
-        alt={plant.name}
-        className="absolute -top-24 left-1/2 w-[230px] -translate-x-1/2 drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105 sm:w-[250px]"
-      />
+    <article className="group mt-16 flex flex-col rounded-[3.5rem] glass px-8 pb-8 pt-6 text-white/80 shadow-card transition-transform duration-300 hover:-translate-y-2">
+      {/* Fixed image zone: the plant floats above the card and every pot is
+          bottom-aligned so all cards line up regardless of the PNG framing. */}
+      <div className="-mt-24 mb-2 flex h-44 items-end justify-center">
+        <img
+          src={plant.image}
+          alt={plant.name}
+          className="max-h-56 w-auto max-w-[85%] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-105"
+        />
+      </div>
 
       <h3 className="text-2xl font-normal sm:text-3xl">{plant.name}</h3>
       <p className="mt-3 min-h-[72px] text-base leading-relaxed sm:text-lg">

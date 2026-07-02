@@ -8,11 +8,11 @@ export default function HeroBanner() {
   return (
     <section
       id="home"
-      className="relative mx-auto max-w-design px-5 sm:px-8 lg:px-10"
+      className="relative mx-auto max-w-design px-5 sm:px-8 lg:min-h-[760px] lg:px-10"
     >
       {/* Background plant image — contained to the hero so it can't bleed
           into the sections below, and fading to solid forest at the bottom. */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[560px] overflow-hidden sm:h-[680px] lg:h-[820px]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[520px] overflow-hidden sm:h-[640px] lg:h-[760px]">
         <img
           src="/assets/hero-bg.jpg"
           alt=""
